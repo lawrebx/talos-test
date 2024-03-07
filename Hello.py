@@ -7,6 +7,15 @@ import os
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
+import subprocess
+import sys
+
+@st.cache
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+install('plotly')
+
 st.set_page_config(page_title="Talos - Analyst",page_icon=':fuelpump:',layout="wide")
 
 @st.cache_data
