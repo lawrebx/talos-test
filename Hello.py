@@ -3,18 +3,6 @@ import pandas as pd
 from chart import diff_scatter
 from comp_map import gen_comp_map
 from streamlit_folium import st_folium
-import os 
-
-dir_path = os.path.dirname(os.path.realpath(__file__))
-
-import subprocess
-import sys
-
-@st.cache
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-install('plotly')
 
 st.set_page_config(page_title="Talos - Analyst",page_icon=':fuelpump:',layout="wide")
 
