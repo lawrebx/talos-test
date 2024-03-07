@@ -16,5 +16,5 @@ sales_source = pd.read_csv('sales_data.csv')
 all_site_data = pd.read_csv('site_data.csv')
 
 st.header('Welcome to the Talos Experience')
-st.image('images/Talos Logo - High Res - White Text.png',use_column_width=True)
+st.image('images/Talos Logo - High Res - White Text.png',use_column_width=False)
 
