@@ -44,8 +44,6 @@ placeholder_comp = {'Morning Commute': 'Murphy USA - Loop 288',
 
 st.header(f'{site_info["Site Name"].iloc[0]} Competitor Analysis')
 
-st.divider()
-
 map_column, comp_column = st.columns([8,2])
 
 with map_column:
