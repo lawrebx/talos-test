@@ -47,7 +47,7 @@ st.header(f'{daypart_selection} Daypart | Key Comp: {placeholder_comp[daypart_se
 
 st.divider()
 
-st_folium(gen_comp_map(33.180382,-97.100601, 'x'), width = 925)
+st_folium(gen_comp_map(33.180382,-97.100601, daypart = daypart_selection))
 
 st.divider()
 
