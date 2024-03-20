@@ -43,7 +43,6 @@ placeholder_comp = {'Morning Commute': 'Murphy USA - Loop 288',
                     'Overnight': 'Chevron - Robinson Rd'}
 
 st.title(f'{site_info["Site Name"].iloc[0]} Playbook')
-st.header( |  (placeholder)')
 
 st.divider()
 
@@ -55,7 +54,7 @@ with map_column:
 with comp_column:
     st.write(f'{daypart_selection} Daypart')
     st.write(f'Key Comp: {placeholder_comp[daypart_selection]}')
-    
+
 st.divider()
 
 st.header('Elasticity Analysis')
