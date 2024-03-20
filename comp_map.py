@@ -1,12 +1,15 @@
 import folium
+import pathlib
+
+filepath = pathlib.Path(__file__).parent.resolve()
 
 def gen_comp_map(lat, lon, daypart = 'Morning Commute', comp_list = None, dark_mode = True, network_visible = True):
 
-    client_image = 'images/Bucees.png'
-    musa_image = 'images/MUSA.png'
-    rt_image = 'images/RaceTrac.png'
-    kgr_image = 'images/Kroger.png'
-    chv_image = 'images/Chevron.png'
+    client_image = f'{filepath}/images/Bucees.png'
+    musa_image = f'{filepath}/images/MUSA.png'
+    rt_image = f'{filepath}/images/RaceTrac.png'
+    kgr_image = f'{filepath}/images/Kroger.png'
+    chv_image = f'{filepath}/images/Chevron.png'
 
     client_icon = folium.CustomIcon(
             client_image,
@@ -57,7 +60,7 @@ def gen_comp_map(lat, lon, daypart = 'Morning Commute', comp_list = None, dark_m
         location=[33.192939,-97.094033],
         tooltip = "Murphy USA - Loop 288",
         popup = f"""<div>
-                    <img src="images/MUSA.png" alt="Murphy USA" width="100" height="100">
+                    <img src="{musa_image}" alt="Murphy USA" width="100" height="100">
                     <br /><span>{musa_daypart[daypart][2]}</span>
                     </div>""",
         icon = folium.Icon(icon = musa_daypart[daypart][0], prefix = 'fa', color=musa_daypart[daypart][1]) # can add custom icon
@@ -67,7 +70,7 @@ def gen_comp_map(lat, lon, daypart = 'Morning Commute', comp_list = None, dark_m
         location=[33.129523,-97.043119],
         tooltip = "RaceTrac - Swisher Rd",
         popup = f"""<div>
-                    <img src="images/RaceTrac.png" alt="RaceTrac" width="100" height="100">
+                    <img src="{musa_image}" alt="RaceTrac" width="100" height="100">
                     <br /><span>{rt_daypart[daypart][2]}</span>
                     </div>""",
         icon = folium.Icon(icon = rt_daypart[daypart][0], prefix = 'fa', color=rt_daypart[daypart][1]) # can add custom icon
@@ -77,7 +80,7 @@ def gen_comp_map(lat, lon, daypart = 'Morning Commute', comp_list = None, dark_m
         location=[33.145703,-97.104813],
         tooltip = "Kroger - Teasley",
         popup = f"""<div>
-                    <img src="images/Kroger.png" alt="Kroger" width="100" height="100">
+                    <img src="{musa_image}" alt="Kroger" width="100" height="100">
                     <br /><span>{kgr_daypart[daypart][2]}</span>
                     </div>""",
         icon = folium.Icon(icon = kgr_daypart[daypart][0], prefix = 'fa', color=kgr_daypart[daypart][1]) # can add custom icon
@@ -87,7 +90,7 @@ def gen_comp_map(lat, lon, daypart = 'Morning Commute', comp_list = None, dark_m
         location=[33.185532,-97.108044],
         tooltip = "Chevron",
         popup = f"""<div>
-                    <img src="images/Chevron.png" alt="Chevron" width="100" height="100">
+                    <img src="{musa_image}" alt="Chevron" width="100" height="100">
                     <br /><span>{chv_daypart[daypart][2]}</span>
                     </div>""",
         icon = folium.Icon(icon = chv_daypart[daypart][0], prefix = 'fa', color=chv_daypart[daypart][1]) # can add custom icon
