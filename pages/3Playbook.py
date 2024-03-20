@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from chart import diff_scatter
 from comp_map import gen_comp_map
-from streamlit_folium import st_folium
+from streamlit_folium import st_folium, folium_static
 
 st.set_page_config(page_title="Talos - Analyst Playbook",page_icon=':fuelpump:',layout="wide")
 
@@ -47,7 +47,9 @@ st.header(f'{daypart_selection} Daypart | Key Comp: {placeholder_comp[daypart_se
 
 st.divider()
 
-st_folium(gen_comp_map(33.180382,-97.100601, daypart = daypart_selection))
+map = st_folium(gen_comp_map(33.180382,-97.100601, daypart = daypart_selection))
+
+folium_static(map)
 
 st.divider()
 
