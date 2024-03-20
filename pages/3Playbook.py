@@ -42,7 +42,7 @@ placeholder_comp = {'Morning Commute': 'Murphy USA - Loop 288',
                     'Evening Commute': 'Exxon - Loop 288', 
                     'Overnight': 'Chevron - Robinson Rd'}
 
-st.title(f'{site_info["Site Name"].iloc[0]} Playbook')
+st.header(f'{site_info["Site Name"].iloc[0]} Competitor Analysis')
 
 st.divider()
 
