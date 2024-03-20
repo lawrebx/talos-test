@@ -49,9 +49,11 @@ st.divider()
 
 map_column, comp_column = st.columns([8,2])
 
-map_column.st_folium(gen_comp_map(33.180382,-97.100601, daypart = daypart_selection), width = 1200)
+with map_column:
+    st_folium(gen_comp_map(33.180382,-97.100601, daypart = daypart_selection), width = 1200)
 
-comp_column.st_write('lol')
+with comp_column:
+    st.write('lol')
 
 st.divider()
 
