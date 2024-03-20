@@ -43,7 +43,7 @@ placeholder_comp = {'Morning Commute': 'Murphy USA - Loop 288',
                     'Overnight': 'Chevron - Robinson Rd'}
 
 st.title(f'{site_info["Site Name"].iloc[0]} Playbook')
-st.header(f'{daypart_selection} Daypart | Key Comp: {placeholder_comp[daypart_selection]} (placeholder)')
+st.header( |  (placeholder)')
 
 st.divider()
 
@@ -53,8 +53,9 @@ with map_column:
     st_folium(gen_comp_map(33.180382,-97.100601, daypart = daypart_selection), width = 1200)
 
 with comp_column:
-    st.write('lol')
-
+    st.write(f'{daypart_selection} Daypart')
+    st.write(f'Key Comp: {placeholder_comp[daypart_selection]}')
+    
 st.divider()
 
 st.header('Elasticity Analysis')
